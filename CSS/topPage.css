@@ -1,0 +1,33 @@
+body {
+	font-family: 'Press Start 2P', cursive;
+	background-image: url("../images/topPage.png");
+}
+
+.th_cre {
+	text-align:  center;
+	color: #ffffff; 
+	padding: 15px;
+}
+.th_cate,.th_cate span {
+	display: inline-block;
+	color: #fff;
+}
+.th_cate span {
+	transition: .5s;
+}
+.th_cate:hover span {
+	transform: rotateX(360deg);
+}
+.th_cate {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+}
+a{
+	display:inline-block;
+	text-align:center;
+	width:100%;
+}
+.title{
+ margin-top: 15%;
+}

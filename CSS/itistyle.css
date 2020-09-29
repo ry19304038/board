@@ -1,0 +1,188 @@
+body{
+  /*background-color: #444444;*/
+  background-image: url("images/back5.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: ;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+}
+a:link { 
+	color: #eee; 
+}
+a:visited { 
+	color: #bbb; 
+}
+button{
+  border: 5px solid #ee7800;
+  background-color: #000;
+  color: #ee7800;
+  width:240px;
+  height: 52px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+}
+
+.sub{
+  border: 5px solid #ee7800;
+  background-color: #000;
+  color: #ee7800;
+  width:70px;
+  height: 30px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 5px;
+}
+
+.catepic{
+  text-align: center;
+  color: #eee;
+}
+
+
+.categories{
+  background-color: #222222;
+  width: 70px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  position: fixed;
+  z-index: 5;
+}
+
+.sidebar{
+  background-color: #333333;
+  width: 240px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  position: fixed;
+  z-index: 5;
+  /*overflow: scroll;*/
+
+}
+
+.hidebox{
+  left: 240px;
+  width: 100%;
+  bottom: 0;
+  height: 30px;
+  background-color: #000;
+  position: absolute;
+  position: fixed;
+  z-index: 4;
+
+}
+
+.thread{
+  left: 400px;
+  top: 100px;
+  width: 600px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  margin-bottom: 20%;
+}
+
+.header{
+  background-color: #fff;
+  width: 100%;
+  left: 70px;
+  top: 0;
+  height: 50px;
+  position: absolute;
+  z-index:5;
+  position: fixed;
+}
+
+.body{
+    left: 70px;
+
+
+
+}
+
+.title{
+  left: 240px;
+  width: 100%;
+  top: 0;
+  height: 48px;
+  background-color: #555555;
+  position: absolute;
+  position: fixed;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+
+}
+
+.panels{
+  bottom: 0;
+  position: absolute;
+  width:240px;
+  height: 52px;
+
+}
+
+.placeholder{
+  background-color: #7879;
+  width:1048px;
+  height:53px;
+  right: 70px;
+  position:absolute;
+  bottom: 30px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.resBox{
+  position: absolute;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  right: 50px;
+  padding: 15px;
+  z-index: 1;
+  color: #ffffff;
+}
+.threadbox{
+	overflow: auto;
+	height: 100vh;
+	z-index: 1;
+}
+
+.createres{
+  position: absolute;
+  position: fixed;
+  justify-content: center;
+  background-color: #000;
+
+  width: 70%;
+  height: 53px;
+  bottom: 30px;
+  right: 80px;
+  margin-top: 50px;
+  padding: 15px;
+  border: 5px solid #fff;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+  z-index: 2;
+}
+
+.re_scroller{
+height: auto;
+margin-bottom: 200px;
+
+}
+
+
+
+
+
+.scrollArea{
+	height: 200px;
+	overflow: auto;
+	padding-right: 20px;
+}
+

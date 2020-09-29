@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+
+    <servlet>
+        <servlet-name>listQuery</servlet-name>
+        <servlet-class>listQuery</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>listQuery</servlet-name>
+        <url-pattern>/listQuery</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateThread</servlet-name>
+        <servlet-class>database\CreateThread</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateThread</servlet-name>
+        <url-pattern>/CreateThread</url-pattern>
+    </servlet-mapping>
+
+
+    
+    <servlet>
+        <servlet-name>CreateThreadServlet</servlet-name>
+        <servlet-class>CreateThreadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateThreadServlet</servlet-name>
+        <url-pattern>/CreateThreadServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ThreadList</servlet-name>
+        <servlet-class>ThreadList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ThreadList</servlet-name>
+        <url-pattern>/ThreadList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ThreadListOutPut</servlet-name>
+        <jsp-file>/ThreadListOutPut.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ThreadListOutPut</servlet-name>
+        <url-pattern>/ThreadListOutPut</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ThreadQueryServlet</servlet-name>
+        <servlet-class>ThreadQueryServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ThreadQueryServlet</servlet-name>
+        <url-pattern>/ThreadQueryServlet</url-pattern>
+    </servlet-mapping>
+
+      <servlet>
+        <servlet-name>CPrimeThread</servlet-name>
+        <servlet-class>CPrimeThread</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CPrimeThread</servlet-name>
+        <url-pattern>/CPrimeThread</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResProfile</servlet-name>
+        <servlet-class>ResProfile</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResProfile</servlet-name>
+        <url-pattern>/ResProfile</url-pattern>
+    </servlet-mapping>
+
+     <servlet>
+        <servlet-name>InsertTest</servlet-name>
+        <servlet-class>InsertTest</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertTest</servlet-name>
+        <url-pattern>/InsertTest</url-pattern>
+    </servlet-mapping>
+
+    
+     <servlet>
+        <servlet-name>ResList</servlet-name>
+        <servlet-class>ResList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResList</servlet-name>
+        <url-pattern>/ResList</url-pattern>
+    </servlet-mapping>
+
+      <servlet>
+        <servlet-name>ResListQuery</servlet-name>
+        <servlet-class>ResListQuery</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResListQuery</servlet-name>
+        <url-pattern>/ResListQuery</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ResListOutPut</servlet-name>
+        <jsp-file>/ResListOutPut.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResListOutPut</servlet-name>
+        <url-pattern>/ResListOutPut</url-pattern>
+    </servlet-mapping>
+
+
+      <servlet>
+        <servlet-name>Res</servlet-name>
+        <jsp-file>/Res.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Res</servlet-name>
+        <url-pattern>/Res</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>iti</servlet-name>
+        <jsp-file>/iti.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>iti</servlet-name>
+        <url-pattern>/iti</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
