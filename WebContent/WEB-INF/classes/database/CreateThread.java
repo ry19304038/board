@@ -21,7 +21,7 @@ import bean.ThreadListProfile;
 
 public class CreateThread{
 
-	public static void executeInsert(ThreadListProfile cbean){
+	public static void CreateThread(ThreadListProfile cbean){
 		try{
 
 			String th_title=cbean.getTh_title();
@@ -33,23 +33,14 @@ public class CreateThread{
 			System.out.println(th_name);
 
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println("CreateThread");
 
-			//Oracleに接続する
+			String className = new Object(){}.getClass().getName();
+			System.out.println(className);
+			System.out.println("CreateThread");
 			Connection cn=
 				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl",
 				"cprimeuser","cprime");
-			System.out.println("接続完了");
 
-			//select文
-			// 他のをやりたかったらここを変える
-			// String sql=" SELECT empno,ename FROM emp";
-
-			// スレッドIDの最後を取得
-			// String thred_id="SELECT MAX(th_id)+1 FROM board_thread";
-			// →NULLが戻ってくる
-
-			// th_idの最大を求め、isEmptyでNULLかの判定を行っている
 
 
 			String sql="SELECT MAX(th_id) FROM board_thread";
@@ -68,23 +59,18 @@ public class CreateThread{
 
 			sql="INSERT INTO board_thread(th_id, th_title, th_name, th_category, th_description)VALUES("+thread_id1+",'"+th_title+"','"+th_name+"', '"+th_category+"','"+th_description+"')";
 
-			// select文を実行しResultSetインターフェイスを実装したクラスのインスタンスが返る
 			int i=st.executeUpdate(sql);
 			System.out.print(i);
 			System.out.println(sql);
 
 
 
-			//Oracleから切断する
 			cn.close();
 
-			System.out.println("切断完了");
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-			System.out.println("クラスがないみたい。");
 		}catch(SQLException e){
 			e.printStackTrace();
-			System.out.println("SQL関連の例外みたい。");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
