@@ -11,32 +11,28 @@ import database.CreateThread;
 public class CreateThreadServlet extends HttpServlet{
   public void doPost(HttpServletRequest req,HttpServletResponse res)
   throws IOException,ServletException{
-    req.setCharacterEncoding("Windows-31J");
+    req.setCharacterEncoding("UTF-8");
 
-    System.out.println("ThreadServlet17");
-    // “ü—Í‰æ–Ê‚©‚çƒf[ƒ^‚ğæ“¾‚·‚é
+    System.out.println("CreateThreadServlet");
+
   	String th_title=TextConversion.textReplace(req.getParameter("th_title"));
   	String th_name=TextConversion.textReplace(req.getParameter("th_name"));
     String th_category=req.getParameter("c1");
     String th_description=req.getParameter("th_description");
 
-    // CBean‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µAƒf[ƒ^‚ğƒZƒbƒg‚·‚é
     ThreadListProfile ThreadListProfile = new ThreadListProfile();
     ThreadListProfile.setTh_title(th_title);
     ThreadListProfile.setTh_name(th_name);
     ThreadListProfile.setTh_category(th_category);
     ThreadListProfile.setTh_description(th_description);
 
-    // CBean‚²‚Æinsert‚É“ü‚ê‚é
     CreateThread.executeInsert(ThreadListProfile);
 
-    // CreateThread‚Éˆø”‚ğ“n‚·
+    // CreateThreadï¿½Éˆï¿½ï¿½ï¿½ï¿½ï¿½nï¿½ï¿½
     // CreateThread.ThreadInsert(th_title,th_name);
 
-    System.out.println("ThreadServlet31");
     RequestDispatcher dispatcher=
-    req.getRequestDispatcher("ThreadList");
-    System.out.println("ThreadServlet37");
+    req.getRequestDispatcher("ThreadListServlet");
     dispatcher.forward(req,res);
 
 
