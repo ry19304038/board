@@ -25,7 +25,7 @@ public class ResInsert{
       String res_likes=rbean.getRes_likes();
       String res_date=rbean.getRes_date();
       String th_id=rbean.getTh_id();
-			System.out.println(res_name);
+      System.out.println(res_name);
       System.out.println(res_text);
       System.out.println(res_likes);
       System.out.println(th_id);
@@ -34,31 +34,25 @@ public class ResInsert{
 
       Class.forName("oracle.jdbc.driver.OracleDriver");
 
-      //Oracleに接続する
 			Connection cn=
 				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl",
 				"cprimeuser","cprime");
-			System.out.println("接続完了");
+			System.out.println("Resinsert");
 
- 	  //シーケンスを使用しnextvalで連番に
       	Statement sm = cn.createStatement();
 		String sql = "INSERT INTO board_res(th_id,res_id,res_name,res_text)VALUES('"+th_id+"',board_res_sequence.nextval,'"+res_name+"','"+res_text+"')";
     	System.out.println("sql = "+ sql);
-      // SQLをexecuteupdate で実行
       sm.executeUpdate(sql);
 
-			// System.out.print(i);
-			System.out.println("InsertTest67");
+
+      System.out.println("ResInsert");
 
       cn.close();
 
-      System.out.println("InsertTest 71");
     }catch(ClassNotFoundException e){
       e.printStackTrace();
-      System.out.println("InsertTestL59");
     }catch(SQLException e){
       e.printStackTrace();
-      System.out.println("SQL関連のエラー");
     }catch(Exception e){
       e.printStackTrace();
     }
