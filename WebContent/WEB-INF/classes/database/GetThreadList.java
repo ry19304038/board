@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import bean.ThreadListProfile;
 
-public class listQuery{
+public class GetThreadList{
 
   public static List<ThreadListProfile> getQueryList(){
 
@@ -22,7 +22,7 @@ public class listQuery{
       Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "cprimeuser", "cprime");
       System.out.println("ThreadQuery_L33");
 
-      String sql = "SELECT*FROM board_threadÅ@order by th_id";
+      String sql = "SELECT*FROM board_threadÔøΩ@order by th_id";
       Statement st = cn.createStatement();
 
       ResultSet rs = st.executeQuery(sql);
@@ -48,13 +48,11 @@ public class listQuery{
 
       cn.close();
 
-      System.out.println("ThreadQuery_L56");
+      System.out.println("GetThreadList");
     }catch(ClassNotFoundException e){
       e.printStackTrace();
-      System.out.println("ThreadQuery_L59");
     }catch(SQLException e){
       e.printStackTrace();
-      System.out.println("SQLä÷òAÇÃÉGÉâÅ[");
     }catch(Exception e){
       e.printStackTrace();
     }
