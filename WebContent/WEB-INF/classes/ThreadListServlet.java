@@ -10,7 +10,7 @@ import java.util.Iterator;
 import bean.ThreadListProfile;
 import database.listQuery;
 
-public class ThreadList extends HttpServlet{
+public class ThreadListServlet extends HttpServlet{
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
 		doPost(req,res);
 	}
@@ -21,7 +21,7 @@ public class ThreadList extends HttpServlet{
     req.setAttribute("ThreadList", ThreadList);
 
 
-    System.out.println("ThreadQueryServlet25");
+    System.out.println("ThradListServlet");
     RequestDispatcher dis = req.getRequestDispatcher("iti");
 
     dis.forward(req, res);
